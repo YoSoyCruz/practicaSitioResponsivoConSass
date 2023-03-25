@@ -1,0 +1,30 @@
+@use '../custom' as customs;
+.services{
+    position:relative;
+    padding:1rem 0;
+    &__content{
+        padding: 1rem;
+        margin-top: 0rem;
+        // p{
+        //     font-size: 0.8rem;
+        //     @media (max-width: lg) {
+        //         font-size: 1rem;
+        //     }
+        // }
+        @media (max-width: lg) {
+            margin-top: 5rem;
+        }
+        .icon{
+            font-size: 1.5rem;
+            color: customs.$primary;
+            @media (max-width: lg) {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    &__pic{
+        max-width: 100%;
+
+    }
+}

@@ -1,0 +1,110 @@
+@use '../custom' as customs;
+@use '../components/mixins' as mixins;
+
+
+.footer{
+    padding-top: 1rem;
+    background-color: customs.$footer;
+}
+
+// EMPIEZA EL ESTILO DE LA CAJA DE CONTACTO
+.contact-box{
+    position: relative;
+    
+    &__icon{
+        width: 4rem;
+        stroke: customs.$primary;
+        padding-top: 0.5rem;
+
+        @media (max-width: sm) {
+            width: 4rem;
+        }
+    }
+    &__info{
+        padding:0.4rem;
+        font-weight: 600;
+
+        &--title{
+            color: customs.$white;
+            text-decoration: none;
+            font-size: 1.4rem;
+            @media (max-width: sm) {
+                font-size: 1.4rem;
+            }
+        }
+        &--subtitle{
+            font-size: 0.9rem;
+            color:customs.$gray-600;
+            text-decoration: none;
+            @media (max-width: sm) {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+// empieza el contenido de las redes sociales
+.footer-sm{
+    a{
+        color:customs.$white;
+        i{
+            font-size: 1rem;
+            margin-left: 1rem;
+            @media (max-width: sm) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+// estilo de la información de la compañia
+.company-list{
+    display: block;
+    list-style-type: none;
+    position: relative;
+    li{
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+        a{
+            color:customs.$white;
+            text-decoration: none;
+            &:hover{
+                color:customs.$primary;
+            }
+        }
+    }
+}
+
+// estilo de derechos de autor footer
+.footer-bottom{
+    background-color: customs.$black;
+
+    &__copyright{
+        color:customs.$gray-600;
+        font-weight: 400;
+        a{
+            color: customs.$gray-300;
+            text-decoration: none;
+
+            &:hover{
+                color:customs.$primary;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// estilo del botón "regresar a inicio"
+.back-to-top{
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 1.87rem;
+    bottom: 1.875rem;
+    z-index:9999;
+    i{
+        color:customs.$primary;
+        font-size: 1rem;
+        @include mixins.absoluteCenter;
+    }
+}
